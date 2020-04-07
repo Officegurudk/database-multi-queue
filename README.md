@@ -6,3 +6,21 @@ This extension will allow the user to push a job (or event) to multiple queues a
 
 Instead of using `database` as the `QUEUE_CONNECTION`, use `database-multi`. This works just like the `database` 
 connector, except you can use an array as an events `$broadcastQueue` property.
+
+## Config
+
+Add this to your `config/queue.php` files `connections` section:
+
+```php
+    'connections' => [
+        ...,
+
+        'multi-database' => [
+            'driver' => 'multi-database',
+            'table' => 'jobs',
+            'queue' => 'default',
+            'retry_after' => 90,
+        ],
+
+    ],
+```
