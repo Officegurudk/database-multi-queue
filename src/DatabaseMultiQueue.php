@@ -1,6 +1,6 @@
 <?php
 
-namespace Officeguru\Multi;
+namespace Officeguru\MultiQueue;
 
 use Illuminate\Queue\DatabaseQueue;
 
