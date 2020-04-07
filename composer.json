@@ -1,0 +1,27 @@
+{
+    "name": "officeguru/database-multi-queue",
+    "description": "An extension of the database queue to enable adding a job/event to multiple queues at the same time",
+    "require": {
+        "php": ">=7",
+        "illuminate/support": "^5.5|^6.0|^7.0|^8.0",
+        "laravel/framework": "^6.0|^7.0|^8.0"
+    },
+    "authors": [
+        {
+            "name": "Christian Morgan Andersen",
+            "email": "cma@officeguru.dk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Officeguru\\MultiQueue\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Officeguru\\MultiQueue\\QueueServiceProvider"
+            ]
+        }
+    }
+}
